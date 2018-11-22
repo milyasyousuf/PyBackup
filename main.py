@@ -1,5 +1,5 @@
-from Gdrive import GoogleDriveConn
-from BuildBackup import BuildBackup 
+from gdrive import GoogleDriveConn
+from backup import BuildBackup 
 import settings as cf,datetime
 
 class Driver():
@@ -17,7 +17,6 @@ class Driver():
         bb.compress_backup_file()
         dr = GoogleDriveConn()
         dr.upload_file_gdrive(self.destination)
-
 
 
 
