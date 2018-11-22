@@ -1,0 +1,7 @@
+__pycache__/
+.env
+.vscode
+token.json
+client_secret.json
+gdrive_credentials.txt
+.credentials
