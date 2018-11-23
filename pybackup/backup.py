@@ -1,4 +1,4 @@
-import settings as cf
+from pybackup import settings as cf
 import pyodbc,datetime,shutil,os,zipfile
 class BuildBackup():
     def __init__(self):

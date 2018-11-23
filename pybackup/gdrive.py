@@ -1,6 +1,6 @@
 from pydrive.auth import GoogleAuth
+from pybackup import settings as cf
 from pydrive.drive import GoogleDrive
-import settings as cf
 
 
 class GoogleDriveConn():
