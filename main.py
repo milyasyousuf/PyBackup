@@ -1,6 +1,7 @@
 
 from pybackup.gdrive import GoogleDriveConn
-from pybackup.backup import BuildBackup 
+from pybackup.backup import BuildBackup
+from pybackup.notification import Notification
 from pybackup import settings as cf
 import datetime
 
@@ -18,10 +19,9 @@ class Driver():
         bb.copy_back_file()
         bb.compress_backup_file()
         dr = GoogleDriveConn()
-        dr.upload_file_gdrive(self.destination)
-    def test_path(self):
-        pass
-
+        filename,file_id = dr.upload_file_gdrive(self.destination)
+        noti = Notification()
+        noti.send_email(file_id)
 
 
 

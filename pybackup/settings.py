@@ -17,3 +17,13 @@ GDRIVE = {
         'CREDENTIALS_FILE':config("GDRIVE_CREDENTIALS_FILENAME"),
 }
 COMPRESSION_TYPE=config("COMPRESSION_TYPE")
+
+
+EMAIL_SETTING = {
+        'MAIL_FROM' : config('EMAIL_NOTIFICATION'),
+        'MAIL_HOST' : config('EMAIL_SMTP_SSL_HOST'),
+        'MAIL_PORT' : config('EMAIL_SMTP_SSL_PORT', cast=int),
+        'MAIL_USER' : config('EMAIL_SERVER_EMAIL'),
+        'MAIL_PASS' : config('EMAIL_SERVER_PASSWORD'),
+        'MAIL_TO' : config('EMAIL_TARGETS', cast=lambda emails: [e.strip() for e in emails.split(',')]),
+}

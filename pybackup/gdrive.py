@@ -21,3 +21,4 @@ class GoogleDriveConn():
         file1.SetContentFile(filename)
         file1.Upload() # Upload the file.
         print('title: %s, id: %s' % (file1['title'], file1['id']))
+        return file1['title'],file1['id']
