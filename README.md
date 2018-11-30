@@ -1,5 +1,7 @@
 PyBackup
--------
+========
+.. image:: https://img.shields.io/badge/License-MIT-yellow.svg
+    :target: https://opensource.org/licenses/MIT
 
 *PyBackup* is a simples library for make backup of Database and upload it on Google Drive with email notification.
 
